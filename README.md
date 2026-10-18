@@ -1,0 +1,1 @@
+A multi-container, production-ready web application that serves a trained XGBoost machine learning pipeline to predict nightly Airbnb rental rates. The project decouples the architecture into a high-performance Flask API Backend microservice and an interactive Streamlit Web Frontend, fully orchestrated using Docker Compose.
