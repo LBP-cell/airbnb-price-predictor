@@ -1,0 +1,9 @@
+pandas
+requests
+streamlit
+
+
+# %%writefile frontend_files/requirements.txt
+# pandas==2.2.2
+# requests==2.28.1
+# streamlit==1.43.2
