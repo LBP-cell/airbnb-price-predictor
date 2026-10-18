@@ -1,7 +1,7 @@
 # Import necessary libraries
-# import numpy as np
-# import joblib  # For loading the serialized model
-# import pandas as pd  # For data manipulation
+import numpy as np
+import joblib  # For loading the serialized model
+import pandas as pd  # For data manipulation
 from flask import Flask, request, jsonify  # For creating the Flask API
 
 # Initialize the Flask application
@@ -90,4 +90,6 @@ def predict_rental_price_batch():
 
 # Run the Flask application in debug mode if this script is executed directly
 if __name__ == '__main__':
-    rental_price_predictor_api.run(debug=True)
+    # Force the app to listen on all interfaces at the exact port required by your orchestrator
+    rental_price_predictor_api.run(host='0.0.0.0', port=7860, debug=True)
+
