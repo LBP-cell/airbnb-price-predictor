@@ -6,6 +6,8 @@ services:
       - "7860:7860"
     volumes:
       - ./backend:/app
+    networks:
+      - airbnb_net
 
   frontend:
     container_name: frontend
@@ -16,3 +18,9 @@ services:
       - ./frontend:/app
     depends_on:
       - backend
+    networks:
+      - airbnb_net
+
+networks:
+  airbnb_net:
+    driver: bridge
